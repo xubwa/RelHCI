@@ -1,0 +1,20 @@
+nocc 14
+0 1 2 3 4 5 6 7 8 9 10 11 12 13
+end
+orbitals ../FCIDUMP
+nroots 1
+schedule
+0 1000
+1 5e-05
+end
+davidsonTol 1e-7
+davidsonTolLoose 1e-4
+dE 1e-8
+maxiter 16
+targetError 5e-06
+sampleN 150 
+epsilon2Large 2e-06
+epsilon2 1e-10
+noio
+readText
+

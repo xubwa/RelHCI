@@ -1,0 +1,147 @@
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Sat Jul  2 11:05:30 2022
+PID:              117219
+
+Path:             /home/xuwa0145/X4C/Dice/ZCDFCI
+Commit:           0babcd1ee0575cdab776388df4c7d0c1debdfaed
+Branch:           relWithBagel
+Compilation Date: Apr  8 2022 15:30:58
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+nocc 14
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 
+orbitals ../FCIDUMP
+nroots 1
+schedule
+0 1000
+1 0.0002
+end
+davidsonTol 1e-7
+davidsonTolLoose 1e-4
+dE 1e-8
+maxiter 16
+targetError 5e-06
+sampleN 150
+epsilon2Large 1e-06
+epsilon2 1e-10
+noio
+readText
+
+
+TOT: 0.000 s. DIFF: 0.000 s. MSG: begin_integral
+read text integral 
+close integrals
+TOT: 85.766 s. DIFF: 85.766 s. MSG: end_integral
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0  Given HF Energy:   -18984.7489838336
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e+03           1    -18984.7489838336          1       90.80
+   1    0    2.00e-04       34608    -18984.8901031563          7       93.34
+   2    0    2.00e-04       83616    -18984.8997833282          9       98.67
+   3    0    2.00e-04       94931    -18984.9002755247          7      103.07
+   4    0    2.00e-04       95961    -18984.9003089150          5      106.87
+   5    0    2.00e-04       96025    -18984.9003114031          3      110.47
+   6    0    2.00e-04       96033    -18984.9003117216          2      113.99
+   7    0    2.00e-04       96033    -18984.9003117216          1      117.45
+Performing final tight davidson with tol: 1e-07
+   7    0    2.00e-04       96033    -18984.9003117240          8      118.02
+
+Exiting variational iterations
+
+Variational calculation result
+Root             Energy     Time(s)
+   0   -18984.9003117240      118.03
+
+Printing most important determinants
+ Det     weight  Determinant string
+State :   0
+   0     0.9481100316     0.0000000000 2 2 2 2 2   2 2 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 
+   1    -0.0491535314     0.0000000000 2 2 2 2 2   2 0 0 0 0   0 0 2 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 
+   2    -0.0485883804     0.0000000000 2 2 2 2 2   0 2 0 0 0   0 0 0 0 0   0 2 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 
+   3    -0.0428574697     0.0000000000 2 2 2 2 2   2 0 0 0 0   0 0 0 2 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 
+   4     0.0300620949     0.0000000000 2 2 2 2 2   2 a 0 0 0   0 0 0 0 0   0 b 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 
+   5    -0.0300620949     0.0000000000 2 2 2 2 2   2 b 0 0 0   0 0 0 0 0   0 a 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 
+
+
+**************************************************************
+Returning without error
+**************************************************************
+
+
+
+
+**************************************************************
+PERTURBATION THEORY STEP  
+**************************************************************
+Performing semistochastic PT for state:   0
+
+1/ Deterministic calculation with epsilon2=1e-06
+Deterministic PT calculation converged
+PTEnergy:  -18984.9118554229
+Time(s):      173.88
+
+2/ Stochastic calculation with epsilon2=1e-10
+  Iter          EPTcurrent  State             EPTavg      Error     Time(s)
+     1   -18984.9117795038      0  -18984.9117795038         --      204.18
+     2   -18984.9117539311      0  -18984.9117667174         --      234.70
+     3   -18984.9118031863      0  -18984.9117788737         --      263.36
+     4   -18984.9117760291      0  -18984.9117781626         --      292.44
+     5   -18984.9117798839      0  -18984.9117785068   7.82e-06      321.43
+     6   -18984.9117979690      0  -18984.9117817505   7.16e-06      350.63
+     7   -18984.9117915566      0  -18984.9117831514   6.21e-06      379.71
+     8   -18984.9118002894      0  -18984.9117852937   5.79e-06      408.46
+     9   -18984.9117541444      0  -18984.9117818326   6.17e-06      437.30
+    10   -18984.9117478988      0  -18984.9117784392   6.48e-06      466.20
+    11   -18984.9118058575      0  -18984.9117809318   6.37e-06      495.19
+    12   -18984.9117570098      0  -18984.9117789383   6.14e-06      525.80
+    13   -18984.9117841570      0  -18984.9117793397   5.67e-06      555.03
+    14   -18984.9117618543      0  -18984.9117780908   5.39e-06      583.97
+    15   -18984.9117854584      0  -18984.9117785820   5.04e-06      613.31
+    16   -18984.9117768016      0  -18984.9117784707   4.72e-06      642.36
+Semistochastic PT calculation converged
+PTEnergy:  -18984.9117784707 +/- 4.72e-06
+Time(s):      642.36
+State:   0,  E:  -18984.9117784707, dE:       0.00
+
+
+**************************************************************
+Returning without error
+**************************************************************
+
+
